@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <img
+      id="photo"
+      src="images/max3.jpg"
+      alt="Sample"
+      style="display: block; margin: 20px 0"
+    />
+    <button id="fadeInBtn">Fade In</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="fadeToggleBtn">Fade Toggle</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#fadeInBtn").click(function () {
+          $("#photo").fadeIn(800);
+        });
+
+        $("#fadeOutBtn").click(function () {
+          $("#photo").fadeOut(800);
+        });
+
+        $("#fadeToggleBtn").click(function () {
+          $("#photo").fadeToggle(800);
+        });
+      });
+    </script>
+  </body>
+</html>

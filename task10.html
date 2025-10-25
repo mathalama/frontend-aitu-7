@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 10</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background: rgb(71, 71, 71);
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <br />
+    <button id="animateBtn">Animate</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#animateBtn").click(function () {
+          $("#box").animate(
+            {
+              left: "200px",
+              top: "100px",
+              width: "150px",
+              height: "150px",
+              opacity: 0.3,
+            },
+            1000
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

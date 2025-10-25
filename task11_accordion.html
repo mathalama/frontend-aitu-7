@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accordion</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .acc {
+        max-width: 600px;
+        margin: 20px auto;
+        font-family: sans-serif;
+      }
+      .acc h3 {
+        margin: 0;
+        padding: 12px;
+        background: #eee;
+        cursor: pointer;
+        border: 1px solid #ddd;
+      }
+      .panel {
+        display: none;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-top: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="acc">
+      <h3>Section 1</h3>
+      <div class="panel"><p>Content 1</p></div>
+      <h3>Section 2</h3>
+      <div class="panel"><p>Content 2</p></div>
+      <h3>Section 3</h3>
+      <div class="panel"><p>Content 3</p></div>
+    </div>
+
+    <script>
+      $(function () {
+        $(".acc h3").on("click", function () {
+          const p = $(this).next(".panel");
+          $(".panel").not(p).slideUp(200);
+          p.slideToggle(200);
+        });
+      });
+    </script>
+  </body>
+</html>

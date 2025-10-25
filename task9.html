@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 9</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background: rgb(71, 71, 71);
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <br />
+    <button id="run">Run sequence</button>
+
+    <script>
+      $(function () {
+        $("#run").on("click", function () {
+          const $b = $("#box");
+          $b.stop(true, true)
+            .animate({ left: 200 }, 400)
+            .animate({ top: 150 }, 400)
+            .animate({ width: 50, height: 50 }, 400)
+            .animate({ left: 0, top: 0, width: 100, height: 100 }, 500);
+        });
+      });
+    </script>
+  </body>
+</html>

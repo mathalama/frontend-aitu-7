@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 6</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <img id="pic" src="images/max.jpg" alt="Placeholder" />
+    <br /><br />
+    <a id="myLink" href="https://mathalama.dev" target="_blank"
+      >Go to Mathalama</a
+    >
+    <br /><br />
+    <button id="changeImg">Change Image</button>
+    <button id="changeLink">Change Link</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#changeImg").click(function () {
+          $("#pic").attr("src", "images/max4.jpg");
+        });
+
+        $("#changeLink").click(function () {
+          $("#myLink").attr("href", "https://google.com").text("Go to Google");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #panel {
+        background: rgb(117, 108, 108);
+        padding: 20px;
+        display: none;
+        border: 1px solid rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="slideDownBtn">Slide Down</button>
+    <button id="slideUpBtn">Slide Up</button>
+    <button id="slideToggleBtn">Slide Toggle</button>
+
+    <div id="panel">
+      <p>Panel</p>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#slideDownBtn").click(function () {
+          $("#panel").slideDown(500);
+        });
+
+        $("#slideUpBtn").click(function () {
+          $("#panel").slideUp(500);
+        });
+
+        $("#slideToggleBtn").click(function () {
+          $("#panel").slideToggle(500);
+        });
+      });
+    </script>
+  </body>
+</html>

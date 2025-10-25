@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1 id="title">Title</h1>
+    <p class="desc">Paragraph</p>
+    <div>Div text</div>
+
+    <script>
+      $(document).ready(function () {
+        $("#title").text("Updated Title via jQuery");
+
+        $(".desc").html("<b>Changed using .html()</b>");
+
+        $("div").css({
+          color: "blue",
+          "background-color": "lightgray",
+          padding: "10px",
+        });
+      });
+    </script>
+  </body>
+</html>
